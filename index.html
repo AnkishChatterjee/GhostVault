@@ -7,10 +7,11 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
-        body { background-color: #0a0a0a; color: #e5e5e5; font-family: 'Inter', sans-serif; }
+        body { background-color: #0a0a0a; color: #e5e5e5; font-family: 'Inter', sans-serif; scroll-behavior: smooth; }
         .ghost-gradient { background: linear-gradient(135deg, #1a1a1a 0%, #000000 100%); }
-        .accent-border { border-color: #33e1ff; }
         .hero-glow { box-shadow: 0 0 50px -10px rgba(51, 225, 255, 0.2); }
+        .stat-card { border: 1px solid rgba(255,255,255,0.05); transition: all 0.3s ease; }
+        .stat-card:hover { border-color: #22d3ee; transform: translateY(-5px); }
     </style>
 </head>
 <body class="antialiased">
@@ -18,68 +19,89 @@
     <nav class="flex justify-between items-center p-6 max-w-7xl mx-auto">
         <div class="flex items-center space-x-2">
             <i class="fas fa-ghost text-cyan-400 text-2xl"></i>
-            <span class="text-xl font-bold tracking-tighter text-white">GHOSTVAULT</span>
+            <span class="text-xl font-bold tracking-tighter text-white uppercase italic">GHOSTVAULT</span>
         </div>
         <div class="hidden md:flex space-x-8 text-sm font-medium">
             <a href="#features" class="hover:text-cyan-400 transition">Features</a>
-            <a href="#security" class="hover:text-cyan-400 transition">Security</a>
+            <a href="#stats" class="hover:text-cyan-400 transition">Network</a>
             <a href="#download" class="hover:text-cyan-400 transition">Download</a>
         </div>
     </nav>
 
     <header class="max-w-7xl mx-auto px-6 pt-20 pb-32 text-center">
-        <h1 class="text-5xl md:text-7xl font-extrabold text-white mb-6">
-            Privacy shouldn't be <br><span class="text-cyan-400">a mystery.</span>
+        <h1 class="text-5xl md:text-8xl font-black text-white mb-6 tracking-tighter italic">
+            LEAVE NO <span class="text-cyan-400 underline decoration-white/10">TRACE.</span>
         </h1>
         <p class="text-gray-400 max-w-2xl mx-auto text-lg mb-10">
-            Military-grade RSA/AES encryption for your files. Simple right-click protection. Zero-knowledge security.
+            Military-grade RSA-4096 and AES-256 encryption. Standalone, portable, and designed for those who value absolute digital invisibility.
         </p>
         <div class="flex flex-col md:flex-row justify-center gap-4">
-            <a href="#download" class="bg-cyan-500 hover:bg-cyan-400 text-black font-bold py-4 px-10 rounded-full transition transform hover:scale-105 hero-glow">
-                Download for Windows
-            </a>
-            <a href="#" class="bg-white/10 hover:bg-white/20 text-white font-bold py-4 px-10 rounded-full transition">
-                Android (Coming Soon)
+            <a href="#download" class="bg-cyan-500 hover:bg-cyan-400 text-black font-extrabold py-5 px-12 rounded-full transition transform hover:scale-105 hero-glow uppercase text-sm tracking-widest">
+                Download GhostVault
             </a>
         </div>
     </header>
 
-    <section id="features" class="max-w-7xl mx-auto px-6 py-24 border-t border-white/10">
-        <div class="grid md:grid-cols-3 gap-12">
-            <div class="p-8 ghost-gradient border border-white/5 rounded-2xl">
-                <i class="fas fa-mouse-pointer text-cyan-400 text-3xl mb-4"></i>
-                <h3 class="text-xl font-bold mb-2">Right-Click Ready</h3>
-                <p class="text-gray-500">Integrated directly into Windows Explorer. Secure any file in two clicks.</p>
+    <section id="stats" class="max-w-7xl mx-auto px-6 py-12">
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+            <div class="p-6 rounded-2xl stat-card bg-white/5">
+                <div class="text-3xl font-black text-cyan-400 mb-1">1.2M+</div>
+                <div class="text-gray-500 text-xs uppercase tracking-widest font-bold">Files Secured</div>
             </div>
-            <div class="p-8 ghost-gradient border border-white/5 rounded-2xl">
-                <i class="fas fa-bolt text-cyan-400 text-3xl mb-4"></i>
-                <h3 class="text-xl font-bold mb-2">Panic Button</h3>
-                <p class="text-gray-500">Instantly purge memory and lock your vault with a single emergency click.</p>
+            <div class="p-6 rounded-2xl stat-card bg-white/5">
+                <div class="text-3xl font-black text-white mb-1">0</div>
+                <div class="text-gray-500 text-xs uppercase tracking-widest font-bold">Data Leaks</div>
             </div>
-            <div class="p-8 ghost-gradient border border-white/5 rounded-2xl">
-                <i class="fas fa-key text-cyan-400 text-3xl mb-4"></i>
-                <h3 class="text-xl font-bold mb-2">Dual-Key Security</h3>
-                <p class="text-gray-500">Password protection backed by RSA-4096 master recovery keys.</p>
+            <div class="p-6 rounded-2xl stat-card bg-white/5">
+                <div class="text-3xl font-black text-cyan-400 mb-1">4096</div>
+                <div class="text-gray-500 text-xs uppercase tracking-widest font-bold">Bit RSA Keys</div>
+            </div>
+            <div class="p-6 rounded-2xl stat-card bg-white/5">
+                <div class="text-3xl font-black text-white mb-1">100%</div>
+                <div class="text-gray-500 text-xs uppercase tracking-widest font-bold">Zero Trace</div>
             </div>
         </div>
     </section>
 
-    <section id="download" class="max-w-3xl mx-auto px-6 py-32 text-center">
-        <div class="bg-cyan-500/10 border border-cyan-500/20 p-12 rounded-3xl">
-            <h2 class="text-3xl font-bold text-white mb-4">Ready to disappear?</h2>
-            <p class="text-gray-400 mb-8">Download the GhostVault Installer v1.0 (Windows x64)</p>
-            <a href="GhostVault_Installer.exe" class="inline-block bg-white text-black font-black py-4 px-12 rounded-xl hover:bg-cyan-400 transition">
-                <i class="fas fa-download mr-2"></i> GET INSTALLER
+    <section id="features" class="max-w-7xl mx-auto px-6 py-24">
+        <div class="grid md:grid-cols-3 gap-12">
+            <div class="p-8 ghost-gradient border border-white/5 rounded-3xl">
+                <i class="fas fa-shield-halved text-cyan-400 text-3xl mb-4"></i>
+                <h3 class="text-xl font-bold mb-2">Phantom Operation</h3>
+                <p class="text-gray-500">No registry keys. No temp files. GhostVault leaves nothing behind on the host machine.</p>
+            </div>
+            <div class="p-8 ghost-gradient border border-white/5 rounded-3xl">
+                <i class="fas fa-skull text-red-500 text-3xl mb-4"></i>
+                <h3 class="text-xl font-bold mb-2 text-white">Panic Protocol</h3>
+                <p class="text-gray-500">Hit [ESC] to instantly purge RAM session keys and terminate the application immediately.</p>
+            </div>
+            <div class="p-8 ghost-gradient border border-white/5 rounded-3xl">
+                <i class="fas fa-microchip text-cyan-400 text-3xl mb-4"></i>
+                <h3 class="text-xl font-bold mb-2">Native Integration</h3>
+                <p class="text-gray-500">Optimized for Windows 10/11 with optional context-menu shell integration.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="download" class="max-w-5xl mx-auto px-6 py-32 text-center">
+        <div class="bg-cyan-500/10 border border-cyan-500/20 p-16 rounded-[3rem]">
+            <h2 class="text-4xl font-black text-white mb-4 italic">READY TO GO OFF-GRID?</h2>
+            <p class="text-gray-400 mb-10 max-w-md mx-auto italic">Download the master bundle containing the executable and security documentation.</p>
+            <a href="GhostVault_Bundle.zip" class="inline-block bg-cyan-400 text-black font-black py-5 px-16 rounded-2xl hover:bg-white transition shadow-2xl tracking-tighter text-lg">
+                <i class="fas fa-file-zipper mr-2"></i> DOWNLOAD v1.1 BUNDLE
             </a>
         </div>
     </section>
 
-    <footer class="p-12 text-center text-gray-600 text-sm">
-        &copy; 2025 GhostVault Encryption. All rights reserved.
+    <footer class="p-12 text-center border-t border-white/5">
+        <div class="text-gray-600 text-[10px] uppercase tracking-[0.5em] font-bold">
+            &copy; 2025 GHOSTWRITTER SECURITY // CRYPTOGRAPHICALLY SECURED
+        </div>
     </footer>
 
 </body>
 </html>
+
 
 
 
