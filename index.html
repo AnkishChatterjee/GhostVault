@@ -3,74 +3,93 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GhostVault | Phantom-Grade Encryption</title>
+    <title>GhostVault | Secure Encryption</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;900&family=JetBrains+Mono&display=swap" rel="stylesheet">
+    
     <style>
+        /* The deep black background from version 1 */
         body {
-            background-color: #050505;
+            background-color: #0a0a0a;
             color: #ffffff;
-            font-family: 'Segoe UI', Arial, sans-serif;
+            font-family: 'Inter', sans-serif;
             margin: 0;
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
             min-height: 100vh;
-            text-align: center;
+            overflow: hidden;
         }
 
-        /* Glowing Title */
+        /* The original heavy italic title with the Cyan glow */
         h1 {
-            font-size: clamp(3rem, 10vw, 5rem);
+            font-size: clamp(4rem, 15vw, 8rem);
             font-weight: 900;
             margin: 0;
             font-style: italic;
-            letter-spacing: -2px;
-            text-shadow: 0 0 25px rgba(34, 211, 238, 0.6);
+            letter-spacing: -4px;
+            line-height: 0.9;
+            text-shadow: 0 0 20px rgba(34, 211, 238, 0.6);
         }
+
         .cyan { color: #22d3ee; }
 
-        /* Main Container */
-        .container {
-            background: #0f0f0f;
-            border: 1px solid rgba(255,255,255,0.1);
-            padding: 40px;
-            border-radius: 24px;
-            max-width: 400px;
-            width: 85%;
-            margin-top: 20px;
-            box-shadow: 0 10px 40px rgba(0,0,0,0.7);
+        /* Sub-header using the Mono font */
+        .status-text {
+            font-family: 'JetBrains Mono', monospace;
+            color: #444;
+            font-size: 0.8rem;
+            letter-spacing: 6px;
+            margin-top: 10px;
+            text-transform: uppercase;
         }
 
-        p { color: #888; line-height: 1.6; margin-bottom: 35px; font-size: 1rem; }
+        /* The minimalist card layout */
+        .card {
+            background: #111;
+            border: 1px solid rgba(255,255,255,0.05);
+            padding: 50px 40px;
+            border-radius: 20px;
+            max-width: 450px;
+            width: 85%;
+            margin-top: 40px;
+            box-shadow: 0 30px 60px rgba(0,0,0,0.5);
+        }
 
-        /* Download Button */
-        .download-btn {
+        p {
+            color: #666;
+            font-size: 1.1rem;
+            line-height: 1.6;
+            margin-bottom: 40px;
+        }
+
+        /* The version 1 sharp-cornered button */
+        .btn {
             display: block;
             text-decoration: none;
-            padding: 20px;
-            border-radius: 14px;
-            font-weight: bold;
-            text-transform: uppercase;
-            cursor: pointer;
-            background: #22d3ee;
+            background-color: #22d3ee;
             color: #000;
-            font-size: 1.1rem;
+            padding: 22px;
+            font-weight: 900;
+            font-size: 1.2rem;
+            text-transform: uppercase;
+            letter-spacing: -0.5px;
             transition: all 0.3s ease;
+            border-radius: 8px; /* Sharper corners like the first one */
         }
 
-        .download-btn:hover {
-            background: #ffffff;
-            box-shadow: 0 0 30px rgba(34, 211, 238, 0.5);
-            transform: translateY(-3px);
+        .btn:hover {
+            background-color: #ffffff;
+            transform: scale(1.03);
+            box-shadow: 0 0 30px rgba(34, 211, 238, 0.4);
         }
 
-        .status-bar {
-            color: #22d3ee;
+        footer {
+            margin-top: 60px;
+            font-family: 'JetBrains Mono', monospace;
+            color: #222;
             font-size: 0.7rem;
             letter-spacing: 4px;
-            margin-top: 15px;
-            font-family: monospace;
-            opacity: 0.8;
         }
     </style>
 </head>
@@ -78,20 +97,24 @@
 
     <header>
         <h1>GHOST<span class="cyan">VAULT</span></h1>
-        <div class="status-bar">V1.1 // RSA-4096 ACTIVE</div>
+        <div class="status-text">Phantom-Grade // V1.1</div>
     </header>
 
-    <div class="container">
-        <p>Advanced standalone file encryption. Designed for privacy, built for security, and completely trace-free.</p>
+    <div class="card">
+        <p>
+            Secure your documents with RSA-4096 encryption. 
+            Standalone, portable, and designed to leave no trace.
+        </p>
         
-        <a href="GhostVault_Bundle.zip" class="download-btn">
-            Download GhostVault
+        <a href="GhostVault_Bundle.zip" class="btn">
+            Get the Zip Bundle
         </a>
     </div>
 
-    <footer style="margin-top: 60px; color: #333; font-size: 0.7rem; letter-spacing: 3px; font-weight: bold;">
-        SECURED BY GHOSTWRITTER
+    <footer>
+        © GHOSTWRITTER CRYPTOGRAPHY
     </footer>
 
 </body>
 </html>
+
