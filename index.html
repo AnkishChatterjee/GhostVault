@@ -3,163 +3,83 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GhostVault | Phantom-Grade Security</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&family=JetBrains+Mono&display=swap" rel="stylesheet">
-    
+    <title>GhostVault | Secure Your Digital Identity</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
-        /* CSS STYLES */
-        html { scroll-behavior: smooth; }
-        body {
-            background-color: #050505;
-            color: #ffffff;
-            font-family: 'Inter', sans-serif;
-            margin: 0;
-            line-height: 1.6;
-        }
-
-        .cyan { color: #22d3ee; }
-        .bg-dark { background-color: #0a0a0a; }
-
-        /* Navigation */
-        nav {
-            position: fixed;
-            top: 0; width: 100%;
-            background: rgba(5, 5, 5, 0.9);
-            backdrop-filter: blur(10px);
-            padding: 20px 0;
-            z-index: 1000;
-            border-bottom: 1px solid rgba(255,255,255,0.05);
-        }
-        nav .links { text-align: center; }
-        nav a {
-            color: #666; text-decoration: none; margin: 0 20px;
-            font-family: 'JetBrains Mono', monospace; font-size: 0.8rem;
-            transition: 0.3s; text-transform: uppercase;
-        }
-        nav a:hover { color: #22d3ee; }
-
-        /* Sections */
-        section {
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            padding: 100px 20px;
-            box-sizing: border-box;
-        }
-
-        /* Hero Section */
-        h1 {
-            font-size: clamp(3.5rem, 12vw, 7rem);
-            font-weight: 900; font-style: italic; margin: 0;
-            letter-spacing: -4px; text-shadow: 0 0 30px rgba(34, 211, 238, 0.4);
-        }
-
-        .btn-main {
-            display: inline-block;
-            margin-top: 40px;
-            padding: 20px 50px;
-            background: #22d3ee;
-            color: #000;
-            font-weight: 900;
-            text-decoration: none;
-            border-radius: 5px;
-            text-transform: uppercase;
-            transition: 0.3s;
-        }
-        .btn-main:hover { transform: scale(1.05); background: #fff; box-shadow: 0 0 40px rgba(34, 211, 238, 0.5); }
-
-        /* Features Grid */
-        .grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-            max-width: 1200px;
-            width: 100%;
-        }
-        .feature-card {
-            background: #111;
-            padding: 40px;
-            border-radius: 15px;
-            border: 1px solid rgba(255,255,255,0.05);
-            transition: 0.3s;
-        }
-        .feature-card:hover { border-color: #22d3ee; }
-        .feature-card h3 { color: #22d3ee; margin-top: 0; font-family: 'JetBrains Mono'; }
-
-        /* Content Text */
-        .max-w { max-width: 800px; text-align: center; }
-        h2 { font-size: 3rem; margin-bottom: 20px; }
-        p { color: #888; font-size: 1.1rem; }
-
-        footer { padding: 50px; text-align: center; color: #333; font-family: 'JetBrains Mono'; font-size: 0.7rem; }
+        body { background-color: #0a0a0a; color: #e5e5e5; font-family: 'Inter', sans-serif; }
+        .ghost-gradient { background: linear-gradient(135deg, #1a1a1a 0%, #000000 100%); }
+        .accent-border { border-color: #33e1ff; }
+        .hero-glow { box-shadow: 0 0 50px -10px rgba(51, 225, 255, 0.2); }
     </style>
 </head>
-<body>
+<body class="antialiased">
 
-    <nav>
-        <div class="links">
-            <a href="#hero">Start</a>
-            <a href="#features">Features</a>
-            <a href="#security">Security</a>
-            <a href="#download">Download</a>
+    <nav class="flex justify-between items-center p-6 max-w-7xl mx-auto">
+        <div class="flex items-center space-x-2">
+            <i class="fas fa-ghost text-cyan-400 text-2xl"></i>
+            <span class="text-xl font-bold tracking-tighter text-white">GHOSTVAULT</span>
+        </div>
+        <div class="hidden md:flex space-x-8 text-sm font-medium">
+            <a href="#features" class="hover:text-cyan-400 transition">Features</a>
+            <a href="#security" class="hover:text-cyan-400 transition">Security</a>
+            <a href="#download" class="hover:text-cyan-400 transition">Download</a>
         </div>
     </nav>
 
-    <section id="hero">
-        <h1>GHOST<span class="cyan">VAULT</span></h1>
-        <div style="font-family: 'JetBrains Mono'; color: #444; letter-spacing: 5px;">V1.1 // RSA-4096</div>
-        <div class="max-w" style="margin-top: 20px;">
-            <p>The world's most discreet standalone encryption suite. No installation, no traces, just absolute security.</p>
+    <header class="max-w-7xl mx-auto px-6 pt-20 pb-32 text-center">
+        <h1 class="text-5xl md:text-7xl font-extrabold text-white mb-6">
+            Privacy shouldn't be <br><span class="text-cyan-400">a mystery.</span>
+        </h1>
+        <p class="text-gray-400 max-w-2xl mx-auto text-lg mb-10">
+            Military-grade RSA/AES encryption for your files. Simple right-click protection. Zero-knowledge security.
+        </p>
+        <div class="flex flex-col md:flex-row justify-center gap-4">
+            <a href="#download" class="bg-cyan-500 hover:bg-cyan-400 text-black font-bold py-4 px-10 rounded-full transition transform hover:scale-105 hero-glow">
+                Download for Windows
+            </a>
+            <a href="#" class="bg-white/10 hover:bg-white/20 text-white font-bold py-4 px-10 rounded-full transition">
+                Android (Coming Soon)
+            </a>
         </div>
-        <a href="#download" class="btn-main">Get Started</a>
-    </section>
+    </header>
 
-    <section id="features" class="bg-dark">
-        <h2 class="cyan italic">CAPABILITIES</h2>
-        <div class="grid">
-            <div class="feature-card">
-                <h3>01. RSA-4096</h3>
-                <p>Utilizes asymmetric key encryption that would take supercomputers billions of years to crack.</p>
+    <section id="features" class="max-w-7xl mx-auto px-6 py-24 border-t border-white/10">
+        <div class="grid md:grid-cols-3 gap-12">
+            <div class="p-8 ghost-gradient border border-white/5 rounded-2xl">
+                <i class="fas fa-mouse-pointer text-cyan-400 text-3xl mb-4"></i>
+                <h3 class="text-xl font-bold mb-2">Right-Click Ready</h3>
+                <p class="text-gray-500">Integrated directly into Windows Explorer. Secure any file in two clicks.</p>
             </div>
-            <div class="feature-card">
-                <h3>02. PANIC-KEY</h3>
-                <p>The "Escape" protocol instantly wipes session variables from RAM, leaving nothing for forensic tools to find.</p>
+            <div class="p-8 ghost-gradient border border-white/5 rounded-2xl">
+                <i class="fas fa-bolt text-cyan-400 text-3xl mb-4"></i>
+                <h3 class="text-xl font-bold mb-2">Panic Button</h3>
+                <p class="text-gray-500">Instantly purge memory and lock your vault with a single emergency click.</p>
             </div>
-            <div class="feature-card">
-                <h3>03. CONTEXT MENU</h3>
-                <p>Direct integration into Windows Explorer. Right-click any file to secure it instantly.</p>
+            <div class="p-8 ghost-gradient border border-white/5 rounded-2xl">
+                <i class="fas fa-key text-cyan-400 text-3xl mb-4"></i>
+                <h3 class="text-xl font-bold mb-2">Dual-Key Security</h3>
+                <p class="text-gray-500">Password protection backed by RSA-4096 master recovery keys.</p>
             </div>
-        </div>
-    </section>
-
-    <section id="security">
-        <div class="max-w">
-            <h2 class="italic">WHY <span class="cyan">GHOSTVAULT?</span></h2>
-            <p>Standard encryption tools leave registry keys, temp files, and metadata. GhostVault is a "Phantom" application. It runs from a USB, stores nothing in the Windows registry (unless requested), and cleans up after itself.</p>
-            <div style="margin-top: 40px; padding: 20px; border: 1px dashed #333; font-family: 'JetBrains Mono'; color: #22d3ee; font-size: 0.9rem;">
-                [ ENCRYPTION_MODE: AES_256_GCM + RSA_4096_OAEP ]
-            </div>
-        </div>
-    </section>
-
-    <section id="download" class="bg-dark">
-        <h2 class="italic">READY TO BECOME <span class="cyan">INVISIBLE?</span></h2>
-        <p class="max-w">Download the complete GhostVault bundle including the executable, documentation, and licensing.</p>
-        
-        <a href="GhostVault_Bundle.zip" class="btn-main">Download .ZIP Bundle</a>
-        
-        <div style="margin-top: 20px; font-size: 0.8rem; color: #444;">
-            Verified for Windows 10/11 | 64-bit Architecture
         </div>
     </section>
 
-    <footer>
-        © GHOSTWRITTER CRYPTOGRAPHY // DESIGNED FOR THE SHADOWS
+    <section id="download" class="max-w-3xl mx-auto px-6 py-32 text-center">
+        <div class="bg-cyan-500/10 border border-cyan-500/20 p-12 rounded-3xl">
+            <h2 class="text-3xl font-bold text-white mb-4">Ready to disappear?</h2>
+            <p class="text-gray-400 mb-8">Download the GhostVault Installer v1.0 (Windows x64)</p>
+            <a href="GhostVault_Installer.exe" class="inline-block bg-white text-black font-black py-4 px-12 rounded-xl hover:bg-cyan-400 transition">
+                <i class="fas fa-download mr-2"></i> GET INSTALLER
+            </a>
+        </div>
+    </section>
+
+    <footer class="p-12 text-center text-gray-600 text-sm">
+        &copy; 2025 GhostVault Encryption. All rights reserved.
     </footer>
 
 </body>
 </html>
+
 
 
