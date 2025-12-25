@@ -3,59 +3,95 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
     <title>GhostVault | Phantom-Grade Encryption</title>
-    <meta name="description" content="GhostVault: Military-grade RSA-4096 and AES-256 file encryption. Secure your digital life with the Ghost Protocol.">
-    <meta name="keywords" content="GhostVault, Encryption, File Security, GhostWritter, Privacy, RSA-4096">
-    
-    <meta property="og:title" content="GhostVault">
-    <meta property="og:description" content="Invisible, Indestructible, Instant Encryption.">
-    <meta property="og:type" content="website">
-
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&family=JetBrains+Mono&display=swap" rel="stylesheet">
-    
     <style>
         body {
             background-color: #050505;
             color: #ffffff;
-            font-family: 'Inter', sans-serif;
-            overflow-x: hidden;
+            font-family: 'Segoe UI', Arial, sans-serif;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            text-align: center;
         }
-        .glow-text {
-            text-shadow: 0 0 20px rgba(34, 211, 238, 0.5);
+
+        /* Glowing Title */
+        h1 {
+            font-size: clamp(3rem, 10vw, 5rem);
+            font-weight: 900;
+            margin: 0;
+            font-style: italic;
+            letter-spacing: -2px;
+            text-shadow: 0 0 25px rgba(34, 211, 238, 0.6);
         }
-        .panic-box {
-            border: 1px solid #991b1b;
-            background: rgba(153, 27, 27, 0.1);
+        .cyan { color: #22d3ee; }
+
+        /* Main Container */
+        .container {
+            background: #0f0f0f;
+            border: 1px solid rgba(255,255,255,0.1);
+            padding: 40px;
+            border-radius: 24px;
+            max-width: 400px;
+            width: 85%;
+            margin-top: 20px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.7);
         }
-        .btn-cyan {
+
+        p { color: #888; line-height: 1.6; margin-bottom: 35px; font-size: 1rem; }
+
+        /* Download Button */
+        .download-btn {
+            display: block;
+            text-decoration: none;
+            padding: 20px;
+            border-radius: 14px;
+            font-weight: bold;
+            text-transform: uppercase;
+            cursor: pointer;
             background: #22d3ee;
+            color: #000;
+            font-size: 1.1rem;
             transition: all 0.3s ease;
         }
-        .btn-cyan:hover {
-            background: #0891b2;
-            box-shadow: 0 0 30px rgba(34, 211, 238, 0.4);
-            transform: translateY(-2px);
+
+        .download-btn:hover {
+            background: #ffffff;
+            box-shadow: 0 0 30px rgba(34, 211, 238, 0.5);
+            transform: translateY(-3px);
+        }
+
+        .status-bar {
+            color: #22d3ee;
+            font-size: 0.7rem;
+            letter-spacing: 4px;
+            margin-top: 15px;
+            font-family: monospace;
+            opacity: 0.8;
         }
     </style>
 </head>
-<body class="min-h-screen flex flex-col items-center justify-center p-6">
+<body>
 
-    <header class="text-center mb-12">
-        <div class="inline-block px-4 py-1 mb-4 border border-cyan-500/30 rounded-full text-cyan-400 text-xs font-mono tracking-widest uppercase">
-            System Status: Secure
-        </div>
-        <h1 class="text-6xl md:text-8xl font-black tracking-tighter glow-text mb-4 italic">
-            GHOST<span class="text-cyan-400">VAULT</span>
-        </h1>
-        <p class="text-gray-400 text-lg md:text-xl font-light max-w-2xl mx-auto">
-            Standalone, military-grade encryption for those who leave no trace. 
-            Powered by <span class="text-white font-mono">RSA-4096</span>.
-        </p>
+    <header>
+        <h1>GHOST<span class="cyan">VAULT</span></h1>
+        <div class="status-bar">V1.1 // RSA-4096 ACTIVE</div>
     </header>
 
-    <main class="w-full max-w-xl bg-[#0f0f0f] border border-white/10 p-8 rounded-3xl shadow-2xl">
+    <div class="container">
+        <p>Advanced standalone file encryption. Designed for privacy, built for security, and completely trace-free.</p>
         
-        <div class="space-y-4 mb-10 font-mono text-sm">
-            <div class="
+        <a href="GhostVault_Bundle.zip" class="download-btn">
+            Download GhostVault
+        </a>
+    </div>
+
+    <footer style="margin-top: 60px; color: #333; font-size: 0.7rem; letter-spacing: 3px; font-weight: bold;">
+        SECURED BY GHOSTWRITTER
+    </footer>
+
+</body>
+</html>
